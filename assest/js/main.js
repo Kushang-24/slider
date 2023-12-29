@@ -27,13 +27,12 @@ function nextImage() {
 }
 
 // function updateSlider() {
-//     const newPosition = -currentImageIndex * 100 + '%';
-//     currentImageIndex.style.transform = 'translateX(' + newPosition + ')';
+//     currentImageIndex.style.transition = `all ${1000}s linear`;
 // }
 
 let autoplayInterval;
 function startAutoplay() {
-    autoplayInterval = setInterval(nextImage, 2000);
+    autoplayInterval = setInterval(nextImage, 3000);
 }
 
 function stopAutoplay() {
@@ -44,11 +43,3 @@ sliderimg.addEventListener('mouseenter', stopAutoplay);
 sliderimg.addEventListener('mouseleave', startAutoplay);
 
 startAutoplay();
-
-
-// const wow = document.getElementById('prev-btn');
-// const test = document.querySelector('#slidertranstion');
-
-// wow.addEventListener('click', () => {
-//   setTimeout(() => test.classList.add('reveal'), 0);
-// })
